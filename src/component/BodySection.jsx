@@ -350,7 +350,7 @@ function BodySection() {
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-20 ml-4 md:ml-32 leading-tight text-center md:text-left"
+        className="mt-20 ml-4  flex flex-col justify-center items-center leading-tight text-center md:text-left"
       >
         <p className="text-3xl md:text-[44px] font-medium text-black m-0 p-0 leading-none">
           Our Learnings
