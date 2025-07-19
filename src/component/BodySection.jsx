@@ -19,7 +19,7 @@ function BodySection() {
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 px-12"
+        className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 px-10"
       >
         {/* Left Section */}
         <div className="w-full md:w-1/2">
@@ -193,17 +193,14 @@ function BodySection() {
           <div className="bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
             <div className="flex items-center justify-between">
               <p className="text-2xl font-semibold text-black">
-                Narrative Testing
+                Social Growth:
               </p>
               <div className="bg-blue-100 p-2 rounded-full">
                 <Shield className="text-blue-600 w-10 h-10" />
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Ran controlled campaigns with different messaging arcs: “iPhones &
-              more at never before prices,” “smart saving,” “extra discounts,
-              always,” and “save INR X per month.” This helped isolate the
-              highest-converting proposition for each user intent cluster.
+              Grew from ~500 to 2800+ followers organically. That’s 450% growth -without heavy ad spends.
             </p>
           </div>
 
@@ -211,16 +208,14 @@ function BodySection() {
           <div className="bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
             <div className="flex items-center justify-between">
               <p className="text-2xl font-semibold text-black">
-                Media Mix Design
+                Engagement Uplift
               </p>
               <div className="bg-blue-100 p-2 rounded-full">
                 <Shield className="text-blue-600 w-10 h-10" />
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Focused 75% spend on Meta (Instagram Reels + Story formats) for
-              discovery and education, with UAC campaigns on Google layered
-              later for conversion-heavy cohorts.
+              Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong engagement- 4x increase in shares & saves vs regular content.
             </p>
           </div>
         </div>
@@ -230,14 +225,14 @@ function BodySection() {
           <div className="bg-[#e6ecfc] rounded-xl shadow p-5 min-h-[250px] w-full border border-blue-600">
             <div className="flex items-center justify-between">
               <p className="text-2xl font-semibold text-black">
-                Strategic Framework
+                Event Visibility:
               </p>
               <div className="bg-blue-100 p-2 rounded-full">
                 <Shield className="text-blue-600 w-10 h-10" />
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              We architected the growth strategy across 4 focused pillars.
+              Weekend events consistently sold out or were at full capacity. Branded events (like Lights Off, Dine In, Hug a Tree, Breakfast surrounded by nature) started drawing people purely for the experience, not just the food.
             </p>
           </div>
         </div>
@@ -248,16 +243,14 @@ function BodySection() {
           <div className="bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
             <div className="flex items-center justify-between">
               <p className="text-2xl font-semibold text-black">
-                Audience Segmentation
+                Revenue Streams:
               </p>
               <div className="bg-blue-100 p-2 rounded-full">
                 <Shield className="text-blue-600 w-10 h-10" />
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Built distinct cohorts — value hunters (deal-seekers), premium
-              shoppers (Zara/Nykaa customers), and fintech adopters. This
-              allowed us to personalize ad journeys while minimizing wastage.
+               Breakfast service (weekends only) introduced in response to early crowd demand → now a steady source of footfall before 11 AM.
             </p>
           </div>
 
@@ -265,17 +258,14 @@ function BodySection() {
           <div className="bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
             <div className="flex items-center justify-between">
               <p className="text-2xl font-semibold text-black">
-                Activation-Led Retargeting
+                Discoverability:
               </p>
               <div className="bg-blue-100 p-2 rounded-full">
                 <Shield className="text-blue-600 w-10 h-10" />
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Ran controlled campaigns with different messaging arcs: “iPhones &
-              more at never before prices,” “smart saving,” “extra discounts,
-              always,” and “save INR X per month.” This helped isolate the
-              highest-converting proposition for each user intent cluster.
+               Footfall increases due to a combo of offline + digital visibility- customers now recognise the space as more than a restaurant.
             </p>
           </div>
         </div>
@@ -313,7 +303,7 @@ function BodySection() {
         </h2>
       </motion.div>
 
-      <div className="flex flex-col md:flex-row gap-8 md:gap-32 ml-4 md:ml-24 mt-10">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-32 ml-4 md:ml-32 mt-10">
         <div className="flex flex-col items-center text-center">
           <p className="text-blue-600 font-bold text-3xl md:text-[40px]">
             10 L+
@@ -334,7 +324,7 @@ function BodySection() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] md:ml-24 mt-6">
+      <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] md:ml-32 mt-6">
         {/* Button-style box */}
         <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
           Bonus Win!
@@ -385,18 +375,17 @@ function BodySection() {
         <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-3">
           <p>
             <span className="text-4xl text-blue-400 font-bold">01</span>
-            <span className="block text-lg md:text-xl mt-4">
-              Early-stage positioning is not about scale — it’s about
-              narrative-market fit.
+            <span className="block text-md md:text-lg mt-4">
+              What worked? Prioritising events as the lead communication vehicle.
+ We didn’t just say “Tall Oaks is a vibe” - we showed it through slow experiences, collaborations, nature-driven content, and experiential storytelling.
             </span>
           </p>
         </div>
         <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-2">
           <p>
             <span className="text-4xl text-blue-400 font-bold">02</span>
-            <span className="block text-lg md:text-xl mt-4">
-              CAC compression isn’t driven by volume — it’s driven by segment
-              clarity.
+            <span className="block text-md md:text-lg mt-4">
+             At RevLabs, we don’t just run campaigns. We build what the brand needs- thoughtfully, creatively, and always with the client’s goals at the centre.
             </span>
           </p>
         </div>
@@ -404,7 +393,7 @@ function BodySection() {
         <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-2">
           <p>
             <span className="text-4xl text-blue-400 font-bold">03</span>
-            <span className="block text-lg md:text-xl mt-4">
+            <span className="block text-md md:text-lg mt-4">
               In new categories, the best-performing messages are often not what
               the founders expect — only structured experimentation reveals the
               truth.
@@ -416,7 +405,7 @@ function BodySection() {
         <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-3">
           <p>
             <span className="text-4xl text-blue-400 font-bold">04</span>
-            <span className="block text-lg md:text-xl mt-4">
+            <span className="block text-md md:text-lg mt-4">
               Retargeting without deep event segmentation is a wasted lever for
               fintech apps.
             </span>
