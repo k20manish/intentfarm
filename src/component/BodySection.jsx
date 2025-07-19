@@ -303,7 +303,7 @@ function BodySection() {
         </h2>
       </motion.div>
 
-      <div className="flex flex-col md:flex-row gap-8 md:gap-32 ml-4 md:ml-32 mt-10">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-8 md:gap-32 ml-4 md:ml-32 mt-10">
         <div className="flex flex-col items-center text-center">
           <p className="text-blue-600 font-bold text-3xl md:text-[40px]">
             10 L+
@@ -350,7 +350,7 @@ function BodySection() {
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-20 ml-4 md:ml-24 leading-tight text-center md:text-left"
+        className="mt-20 ml-4 md:ml-32 leading-tight text-center md:text-left"
       >
         <p className="text-3xl md:text-[44px] font-medium text-black m-0 p-0 leading-none">
           Our Learnings
