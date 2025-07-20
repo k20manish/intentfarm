@@ -200,7 +200,8 @@ function BodySection() {
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Grew from ~500 to 2800+ followers organically. That’s 450% growth -without heavy ad spends.
+              Grew from ~500 to 2800+ followers organically. That’s 450% growth
+              -without heavy ad spends.
             </p>
           </div>
 
@@ -215,7 +216,8 @@ function BodySection() {
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong engagement- 4x increase in shares & saves vs regular content.
+              Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
+              engagement- 4x increase in shares & saves vs regular content.
             </p>
           </div>
         </div>
@@ -232,7 +234,10 @@ function BodySection() {
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Weekend events consistently sold out or were at full capacity. Branded events (like Lights Off, Dine In, Hug a Tree, Breakfast surrounded by nature) started drawing people purely for the experience, not just the food.
+              Weekend events consistently sold out or were at full capacity.
+              Branded events (like Lights Off, Dine In, Hug a Tree, Breakfast
+              surrounded by nature) started drawing people purely for the
+              experience, not just the food.
             </p>
           </div>
         </div>
@@ -250,7 +255,8 @@ function BodySection() {
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-               Breakfast service (weekends only) introduced in response to early crowd demand → now a steady source of footfall before 11 AM.
+              Breakfast service (weekends only) introduced in response to early
+              crowd demand → now a steady source of footfall before 11 AM.
             </p>
           </div>
 
@@ -265,7 +271,8 @@ function BodySection() {
               </div>
             </div>
             <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-               Footfall increases due to a combo of offline + digital visibility- customers now recognise the space as more than a restaurant.
+              Footfall increases due to a combo of offline + digital visibility-
+              customers now recognise the space as more than a restaurant.
             </p>
           </div>
         </div>
@@ -324,25 +331,28 @@ function BodySection() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] md:ml-32 mt-6">
-        {/* Button-style box */}
-        <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
-          Bonus Win!
-        </div>
+    <div className="flex justify-center bg-gray-100 w-full">
+  <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
+    {/* Button-style box */}
+    <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
+      Bonus Win!
+    </div>
 
-        {/* Text content */}
-        <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
-          <p className="whitespace-normal">
-            Early adopters had a 64% activation within 30 days — significantly
-            higher than fintech app benchmarks.
-          </p>
-          <p className="mt-1">
-            Most transactions came from new-to-category users, indicating
-            success in <span className="font-semibold">category creation</span>{" "}
-            — not just share-shift.
-          </p>
-        </div>
-      </div>
+    {/* Text content */}
+    <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
+      <p className="whitespace-normal">
+        Early adopters had a 64% activation within 30 days — significantly
+        higher than fintech app benchmarks.
+      </p>
+      <p className="mt-1">
+        Most transactions came from new-to-category users, indicating
+        success in <span className="font-semibold">category creation</span>{" "}
+        — not just share-shift.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       <motion.div
         variants={fadeInUp}
@@ -376,8 +386,10 @@ function BodySection() {
           <p>
             <span className="text-4xl text-blue-400 font-bold">01</span>
             <span className="block text-md md:text-lg mt-4">
-              What worked? Prioritising events as the lead communication vehicle.
- We didn’t just say “Tall Oaks is a vibe” - we showed it through slow experiences, collaborations, nature-driven content, and experiential storytelling.
+              What worked? Prioritising events as the lead communication
+              vehicle. We didn’t just say “Tall Oaks is a vibe” - we showed it
+              through slow experiences, collaborations, nature-driven content,
+              and experiential storytelling.
             </span>
           </p>
         </div>
@@ -385,7 +397,9 @@ function BodySection() {
           <p>
             <span className="text-4xl text-blue-400 font-bold">02</span>
             <span className="block text-md md:text-lg mt-4">
-             At RevLabs, we don’t just run campaigns. We build what the brand needs- thoughtfully, creatively, and always with the client’s goals at the centre.
+              At RevLabs, we don’t just run campaigns. We build what the brand
+              needs- thoughtfully, creatively, and always with the client’s
+              goals at the centre.
             </span>
           </p>
         </div>
