@@ -331,7 +331,7 @@ function BodySection() {
         </div>
       </div>
 
-    <div className="flex justify-center bg-gray-100 w-full">
+    <div className="flex justify-center w-full">
   <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
     {/* Button-style box */}
     <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
