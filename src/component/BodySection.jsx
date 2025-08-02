@@ -1,9 +1,20 @@
-import React from "react";
+ 
 import { ThumbsDown, Shield } from "lucide-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChessKnight, faChessPawn } from "@fortawesome/free-solid-svg-icons";
+ 
+import {
+  Users,
+  HeartHandshake,
+  TrendingUp,
+  Activity,
+  Star,
+  CalendarCheck,
+  Wallet,
+  MapPin,CalendarHeart,Megaphone, PenTool,Handshake
+} from "lucide-react";
+
 import { motion } from "framer-motion";
 import "@fontsource/roboto/400.css";
+import { useState } from "react";
 
 function BodySection() {
   const fadeInUp = {
@@ -86,27 +97,37 @@ function BodySection() {
             />
 
             {/* Bottom Info */}
-            <div className="w-full max-w-[530px] h-auto rounded-b-2xl pt-8 flex flex-col sm:flex-row justify-between items-start gap-4 text-sm text-gray-700">
-              <div className="flex-1 rounded-md bg-blue-50 p-2 text-[16px]">
-                <p className="text-lg font-semibold text-blue-600 mb-1">
-                  Campaign:
-                </p>
-                Event-led Campaigns, New Menu Launches, Brand Positioning &
-                Awareness
-              </div>
-              <div className="flex-1 rounded-md bg-blue-50 p-2 text-[16px]">
-                <p className="text-lg font-semibold text-blue-600 mb-1">
-                  Industry:
-                </p>
-                F&B – Restaurant & Events
-              </div>
-              <div className="flex-1 rounded-md bg-blue-50 p-2 text-[16px]">
-                <p className="text-lg font-semibold text-blue-600 mb-1">
-                  Key Growth Levers:
-                </p>
-                Event Marketing | Social Media Presence
-              </div>
-            </div>
+    <div className="w-full max-w-[530px] h-auto rounded-b-2xl pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-stretch gap-4 text-sm text-gray-700">
+  {[
+    {
+      title: "Campaign:",
+      content:
+        "Event-led Campaigns, New Menu Launches, Brand Positioning & Awareness",
+    },
+    {
+      title: "Industry:",
+      content: "F&B – Restaurant & Events",
+    },
+    {
+      title: "Key Growth Levers:",
+      content: "Event Marketing | Social Media Presence",
+    },
+  ].map((item, idx) => (
+    <div
+      key={idx}
+      className="w-full sm:flex-1 min-h-[100px] flex flex-col justify-start rounded-md bg-blue-50 p-2 text-sm"
+    >
+      <p className="text-base font-semibold text-blue-600 mb-1">
+        {item.title}
+      </p>
+      <p className="line-clamp-3 overflow-hidden leading-snug text-gray-700">
+        {item.content}
+      </p>
+    </div>
+  ))}
+</div>
+
+
           </div>
         </motion.div>
       </motion.div>
@@ -131,45 +152,92 @@ function BodySection() {
         </div>
 
         {/* Cards Container */}
-        <div className="w-full max-w-[1080px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card Template */}
-          {[
-            {
-              title: "Category Ambiguity",
-              description:
-                "Users didn’t fully grasp the difference between Hubble and cashback wallets or savings apps. This slowed install-to-activation journeys.",
-            },
-            {
-              title: "Delayed Value Realization",
-              description:
-                "The perceived benefit of “extra value on brand spends” required explanation — users needed multiple exposures to unlock action.",
-            },
-            {
-              title: "Early CAC Volatility",
-              description:
-                "Initial CPI hovered around ₹70–₹80, with poor install-to-active-user conversion due to unclear positioning and broad audience targeting.",
-            },
-          ].map((card, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-xl border border-blue-400 p-4 flex flex-col relative hover:bg-blue-100"
-            >
-              {/* Icon */}
-              <div className="absolute top-4 right-4 bg-white shadow-xl p-3 rounded-full">
-                <ThumbsDown className="text-black w-6 h-6 hover:bg-blue-300" />
-              </div>
+ 
 
-              {/* Title */}
-              <h3 className="text-[30px] font-semibold text-black mt-16 ">
-                {card.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-700 mt-4 text-md">{card.description}</p>
-            </div>
-          ))}
+<div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
+  {/* Unified Grid for All Cards */}
+  <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
+    {[
+      {
+        title: "Brand Communication Reboot",
+        description: `Streamlined the messaging across platforms — focused on “nature as luxury” instead of just food. \n\nReframed Tall Oaks as a calm experience, not just a restaurant.`,
+         
+        tag: "Branding"
+      },
+      {
+        title: "Content-Led Social Strategy",
+        description: `Built content around ambient dining, nature sounds, and soulful storytelling.\n\n Strong push on Reels + stories → shifted perception from unknown spot to weekend ritual.`,
+       
+        tag: "Social"
+      },
+      {
+        title: "Event Marketing as a Core Lever",
+        description: `Curated campaigns that made the space more than just a dining venue:\n\n• Hug A Tree: Cause-led Earth Day campaign, built engagement.\n\n• Coastal Fiesta: Seasonal coastal fare — unlocked strong revenue.\n\n• Weekend Breakfast Launch: Drove early footfall & new revenue stream.`,
+         
+        tag: "Events"
+      },
+      {
+        title: "Collaborations & IRL Experiences",
+        description: `• Partnered with the Run Scene → offline synergy & new audience.\n\n• Weekend workshops (e.g., dumpling making) → increased dwell time & experience value.`,
+         
+        tag: "Experience"
+      },
+      {
+        title: "Influencer & OOH Strategy",
+        description: `• Selected aligned creators — authenticity over just reach.\n\n• Local outdoor ads in Whitefield reinforced visual identity.`,
+       
+        tag: "Influencers"
+      },
+    ].map((card, index) => (
+      <div
+        key={index}
+        className="w-full sm:w-[48%] lg:w-[320px] min-h-[270px] bg-white shadow-md rounded-xl border border-blue-400 p-5 pt-4 pb-5 flex flex-col relative overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg group"
+      >
+        {/* Top Right Icon */}
+        <div className="absolute top-4 right-4 bg-white shadow-xl p-2 rounded-full z-10">
+          <ThumbsDown className="text-black w-5 h-5 hover:text-blue-500" />
         </div>
+
+       
+
+        {/* Content */}
+        <div className="flex flex-col z-10 relative pr-6">
+          {/* Icon + Title */}
+          <div className="flex items-start gap-3  min-h-[48px]">
+             
+            <h3 className="text-base font-semibold text-black leading-snug">
+              {card.title}
+            </h3>
+          </div>
+
+          {/* Tag badge */}
+          <div className="mb-4">
+            <span className="inline-block w-fit px-3 text-xs text-blue-600 bg-blue-100 rounded-full">
+              {card.tag}
+            </span>
+          </div>
+
+          {/* Description */}
+          <div className="overflow-y-auto max-h-[140px] pr-1">
+            <p className="text-gray-700 text-sm whitespace-pre-wrap">
+              {card.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
+
       </motion.div>
+
+      {/* full funnel section */}
       <div className="mt-28 text-center px-4">
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
           A Full-Funnel Rethink
@@ -178,7 +246,6 @@ function BodySection() {
           Not Just A Tactical Deployment
         </p>
       </div>
-
       <motion.div
         className="w-full max-w-[1200px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-between gap-6"
         variants={fadeInUp}
@@ -189,91 +256,166 @@ function BodySection() {
       >
         {/* Left Section */}
         <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card 1 */}
-          <div className="bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
-            <div className="flex items-center justify-between">
-              <p className="text-2xl font-semibold text-black">
-                Social Growth:
-              </p>
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Shield className="text-blue-600 w-10 h-10" />
-              </div>
+          {/* Card 1: Social Growth */}
+          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-2 left-2 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+              🌟 Featured
             </div>
-            <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Grew from ~500 to 2800+ followers organically. That’s 450% growth
-              -without heavy ad spends.
-            </p>
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Users />
+            </div>
+            <div>
+              <div className="flex items-center justify-between z-10 relative">
+                <p className="text-2xl font-semibold text-black">
+                  Social Growth 📈
+                </p>
+                <div className="bg-blue-100 p-2 rounded-full z-10">
+                  <Users className="text-blue-600 w-10 h-10" />
+                </div>
+              </div>
+              <p className="text-gray-700 mt-6 text-sm leading-relaxed z-10 relative">
+                Grew from ~500 to 2800+ followers organically. That’s 450%
+                growth – without heavy ad spends.
+              </p>
+            </div>
+            <div className="flex justify-start mt-4 gap-1 z-10 relative">
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+            </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
-            <div className="flex items-center justify-between">
-              <p className="text-2xl font-semibold text-black">
-                Engagement Uplift
-              </p>
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Shield className="text-blue-600 w-10 h-10" />
-              </div>
+          {/* Card 2: Engagement Uplift */}
+          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-2 left-2 bg-pink-100 text-pink-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+              🔥 Trending
             </div>
-            <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
-              engagement- 4x increase in shares & saves vs regular content.
-            </p>
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <HeartHandshake />
+            </div>
+            <div>
+              <div className="flex items-center justify-between z-10 relative">
+                <p className="text-2xl font-semibold text-black">
+                  Engagement Uplift ❤️
+                </p>
+                <div className="bg-blue-100 p-2 rounded-full z-10">
+                  <HeartHandshake className="text-blue-600 w-10 h-10" />
+                </div>
+              </div>
+              <p className="text-gray-700 mt-6 text-sm leading-relaxed z-10 relative">
+                Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
+                engagement – 4x increase in shares & saves vs regular content.
+              </p>
+            </div>
+            <div className="flex justify-start mt-4 gap-1 z-10 relative">
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+            </div>
           </div>
         </div>
 
         {/* Middle Section */}
         <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4 items-center justify-center">
-          <div className="bg-[#e6ecfc] rounded-xl shadow p-5 min-h-[250px] w-full border border-blue-600">
-            <div className="flex items-center justify-between">
-              <p className="text-2xl font-semibold text-black">
-                Event Visibility:
-              </p>
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Shield className="text-blue-600 w-10 h-10" />
-              </div>
+          {/* Card: Event Visibility */}
+          <div className="relative bg-[#e6ecfc] rounded-xl shadow p-5 min-h-[250px] w-full border border-blue-600 overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-2 left-2 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+              ✅ Sold Out
             </div>
-            <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Weekend events consistently sold out or were at full capacity.
-              Branded events (like Lights Off, Dine In, Hug a Tree, Breakfast
-              surrounded by nature) started drawing people purely for the
-              experience, not just the food.
-            </p>
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Activity />
+            </div>
+            <div>
+              <div className="flex items-center justify-between z-10 relative">
+                <p className="text-2xl font-semibold text-black">
+                  Event Visibility ✨
+                </p>
+                <div className="bg-blue-100 p-2 rounded-full z-10">
+                  <CalendarCheck className="text-blue-600 w-10 h-10" />
+                </div>
+              </div>
+              <p className="text-gray-700 mt-6 text-sm leading-relaxed z-10 relative">
+                Weekend events consistently sold out or were at full capacity.
+                Branded events started drawing people purely for the experience,
+                not just the food.
+              </p>
+            </div>
+            <div className="flex justify-start mt-4 gap-1 z-10 relative">
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+            </div>
           </div>
         </div>
 
         {/* Right Section */}
         <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card 1 */}
-          <div className="bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
-            <div className="flex items-center justify-between">
-              <p className="text-2xl font-semibold text-black">
-                Revenue Streams:
-              </p>
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Shield className="text-blue-600 w-10 h-10" />
-              </div>
+          {/* Card: Revenue Streams */}
+          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px] overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-2 left-2 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+              🍳 New Service
             </div>
-            <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Breakfast service (weekends only) introduced in response to early
-              crowd demand → now a steady source of footfall before 11 AM.
-            </p>
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <TrendingUp />
+            </div>
+            <div>
+              <div className="flex items-center justify-between z-10 relative">
+                <p className="text-2xl font-semibold text-black">
+                  Revenue Streams 💰
+                </p>
+                <div className="bg-blue-100 p-2 rounded-full z-10">
+                  <Wallet className="text-blue-600 w-10 h-10" />
+                </div>
+              </div>
+              <p className="text-gray-700 mt-6 text-sm leading-relaxed z-10 relative">
+                Breakfast service introduced due to demand → now a steady source
+                of footfall before 11 AM.
+              </p>
+            </div>
+            <div className="flex justify-start mt-4 gap-1 z-10 relative">
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+            </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px]">
-            <div className="flex items-center justify-between">
-              <p className="text-2xl font-semibold text-black">
-                Discoverability:
-              </p>
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Shield className="text-blue-600 w-10 h-10" />
-              </div>
+          {/* Card: Discoverability */}
+          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px] overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-2 left-2 bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+              📍 Location Buzz
             </div>
-            <p className="text-gray-700 mt-6 text-sm leading-relaxed">
-              Footfall increases due to a combo of offline + digital visibility-
-              customers now recognise the space as more than a restaurant.
-            </p>
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Activity />
+            </div>
+            <div>
+              <div className="flex items-center justify-between z-10 relative">
+                <p className="text-2xl font-semibold text-black">
+                  Discoverability 🔍
+                </p>
+                <div className="bg-blue-100 p-2 rounded-full z-10">
+                  <MapPin className="text-blue-600 w-10 h-10" />
+                </div>
+              </div>
+              <p className="text-gray-700 mt-6 text-sm leading-relaxed z-10 relative">
+                Footfall increased via offline + digital visibility – now known
+                as a weekend destination, not just a restaurant.
+              </p>
+            </div>
+            <div className="flex justify-start mt-4 gap-1 z-10 relative">
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-yellow-400 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+              <Star className="text-gray-300 w-5 h-5" />
+            </div>
           </div>
         </div>
       </motion.div>
@@ -331,28 +473,28 @@ function BodySection() {
         </div>
       </div>
 
-    <div className="flex justify-center w-full">
-  <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
-    {/* Button-style box */}
-    <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
-      Bonus Win!
-    </div>
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
+          {/* Button-style box */}
+          <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
+            Bonus Win!
+          </div>
 
-    {/* Text content */}
-    <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
-      <p className="whitespace-normal">
-        Early adopters had a 64% activation within 30 days — significantly
-        higher than fintech app benchmarks.
-      </p>
-      <p className="mt-1">
-        Most transactions came from new-to-category users, indicating
-        success in <span className="font-semibold">category creation</span>{" "}
-        — not just share-shift.
-      </p>
-    </div>
-  </div>
-</div>
-
+          {/* Text content */}
+          <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
+            <p className="whitespace-normal">
+              Early adopters had a 64% activation within 30 days — significantly
+              higher than fintech app benchmarks.
+            </p>
+            <p className="mt-1">
+              Most transactions came from new-to-category users, indicating
+              success in{" "}
+              <span className="font-semibold">category creation</span> — not
+              just share-shift.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <motion.div
         variants={fadeInUp}

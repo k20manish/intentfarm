@@ -11,6 +11,11 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
       },
     },
-  },
+  }, 
   plugins: [],
+ 
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
+ 
 };
