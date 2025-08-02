@@ -184,7 +184,7 @@ function BodySection() {
     ].map((card, index) => (
       <div
         key={index}
-        className="w-full sm:w-[48%] lg:w-[320px] h-[180px] group perspective"
+        className="w-full sm:w-[48%] lg:w-[320px] h-[220px] group perspective"
       >
         <div className="card-inner">
           {/* Front Side */}
@@ -202,7 +202,7 @@ function BodySection() {
               <span className="inline-block w-fit px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
                 {card.tag}
               </span>
-              <p className="text-gray-700 text-sm line-clamp-3 whitespace-pre-wrap">
+              <p className="text-gray-700 text-sm line-clamp-5 whitespace-pre-wrap">
                 {card.description}
               </p>
             </div>
