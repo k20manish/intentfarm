@@ -153,78 +153,75 @@ function BodySection() {
         </div>
 
         {/* Cards Container */}
+<div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
+  <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
+    {[
+      {
+        title: "Brand Communication Reboot",
+        description: `Streamlined the messaging across platforms — focused on “nature as luxury” instead of just food.\n\nReframed Tall Oaks as a calm experience, not just a restaurant.`,
+        tag: "Branding",
+      },
+      {
+        title: "Content-Led Social Strategy",
+        description: `Built content around ambient dining, nature sounds, and soulful storytelling.\n\nStrong push on Reels + stories → shifted perception from unknown spot to weekend ritual.`,
+        tag: "Social",
+      },
+      {
+        title: "Event Marketing as a Core Lever",
+        description: `Curated campaigns that made the space more than just a dining venue:\n\n• Hug A Tree: Cause-led Earth Day campaign.\n• Coastal Fiesta: Seasonal fare.\n• Weekend Breakfast Launch: Early footfall.`,
+        tag: "Events",
+      },
+       {
+    title: "Collaborations & IRL Experiences",
+    description: `• Partnered with the Run Scene → offline synergy & new audience.\n\n• Weekend workshops (e.g., dumpling making) → increased dwell time & experience value.`,
+    tag: "Experience",
+  },
+  {
+    title: "Influencer & OOH Strategy",
+    description: `• Selected aligned creators — authenticity over just reach.\n\n• Local outdoor ads in Whitefield reinforced visual identity.`,
+    tag: "Influencers",
+  },
+    ].map((card, index) => (
+      <div
+        key={index}
+        className="w-full sm:w-[48%] lg:w-[320px] h-[180px] group perspective"
+      >
+        <div className="card-inner">
+          {/* Front Side */}
+          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden z-10">
+            {/* Icon top-right */}
+            <div className="absolute top-4 right-4 bg-white shadow-xl p-2 rounded-full z-10">
+              <ThumbsDown className="text-black w-5 h-5 hover:text-blue-500" />
+            </div>
 
-        <div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
-          {/* Unified Grid for All Cards */}
-          <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
-            {[
-              {
-                title: "Brand Communication Reboot",
-                description: `Streamlined the messaging across platforms — focused on “nature as luxury” instead of just food. \n\nReframed Tall Oaks as a calm experience, not just a restaurant.`,
+            {/* Main content */}
+            <div className="flex flex-col gap-2 pr-6 relative z-0">
+              <h3 className="text-base font-semibold text-black leading-snug">
+                {card.title}
+              </h3>
+              <span className="inline-block w-fit px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
+                {card.tag}
+              </span>
+              <p className="text-gray-700 text-sm line-clamp-3 whitespace-pre-wrap">
+                {card.description}
+              </p>
+            </div>
+          </div>
 
-                tag: "Branding",
-              },
-              {
-                title: "Content-Led Social Strategy",
-                description: `Built content around ambient dining, nature sounds, and soulful storytelling.\n\n Strong push on Reels + stories → shifted perception from unknown spot to weekend ritual.`,
-
-                tag: "Social",
-              },
-              {
-                title: "Event Marketing as a Core Lever",
-                description: `Curated campaigns that made the space more than just a dining venue:\n\n• Hug A Tree: Cause-led Earth Day campaign, built engagement.\n\n• Coastal Fiesta: Seasonal coastal fare — unlocked strong revenue.\n\n• Weekend Breakfast Launch: Drove early footfall & new revenue stream.`,
-
-                tag: "Events",
-              },
-              {
-                title: "Collaborations & IRL Experiences",
-                description: `• Partnered with the Run Scene → offline synergy & new audience.\n\n• Weekend workshops (e.g., dumpling making) → increased dwell time & experience value.`,
-
-                tag: "Experience",
-              },
-              {
-                title: "Influencer & OOH Strategy",
-                description: `• Selected aligned creators — authenticity over just reach.\n\n• Local outdoor ads in Whitefield reinforced visual identity.`,
-
-                tag: "Influencers",
-              },
-            ].map((card, index) => (
-              <div
-                key={index}
-                className="w-full sm:w-[48%] lg:w-[320px] min-h-[270px] bg-white shadow-md rounded-xl border border-blue-400 p-5 pt-4 pb-5 flex flex-col relative overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg group"
-              >
-                {/* Top Right Icon */}
-                <div className="absolute top-4 right-4 bg-white shadow-xl p-2 rounded-full z-10">
-                  <ThumbsDown className="text-black w-5 h-5 hover:text-blue-500" />
-                </div>
-
-                {/* Content */}
-                <div className="flex flex-col z-10 relative pr-6">
-                  {/* Icon + Title */}
-                  <div className="flex items-start gap-3  min-h-[44px]">
-                    <h3 className="text-base font-semibold text-black leading-snug">
-                      {card.title}
-                    </h3>
-                  </div>
-
-                  {/* Tag badge */}
-                  <div className="mb-4">
-                    <span className="inline-block w-fit px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
-                      {card.tag}
-                    </span>
-                  </div>
-
-                  {/* Description */}
-                  <div className="overflow-y-auto max-h-[140px] pr-1">
-                    <p className="text-gray-700 text-sm whitespace-pre-wrap">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Back Side */}
+          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden rotate-y-180 overflow-y-auto">
+            <p className="text-gray-700 text-sm whitespace-pre-wrap">
+              {card.description}
+            </p>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
       </motion.div>
 
       {/* full funnel section */}
