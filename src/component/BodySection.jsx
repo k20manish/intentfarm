@@ -245,17 +245,17 @@ function BodySection() {
   <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
     {/* Card 1: Social Growth */}
     <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col overflow-hidden">
-      <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+      <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow sm:mb-1 mb-2">
         🌟 Featured
       </div>
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
         <Users />
       </div>
       <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 sm:mt-2 mt-4">
           <p className="text-2xl font-semibold text-black">Social Growth 📈</p>
           <div className="bg-blue-100 p-2 rounded-full">
-            <Users className="text-blue-600 w-10 h-10" />
+            <Users className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
           </div>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
@@ -280,11 +280,11 @@ function BodySection() {
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
         <HeartHandshake />
       </div>
-      <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4">
+      <div className="flex flex-col  flex-1 z-10 relative">
+        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
           <p className="text-2xl font-semibold text-black">Engagement Uplift ❤️</p>
           <div className="bg-blue-100 p-2 rounded-full">
-            <HeartHandshake className="text-blue-600 w-10 h-10" />
+            <HeartHandshake className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
           </div>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
@@ -313,10 +313,10 @@ function BodySection() {
         <Activity />
       </div>
       <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
           <p className="text-2xl font-semibold text-black">Event Visibility ✨</p>
           <div className="bg-blue-100 p-2 rounded-full">
-            <CalendarCheck className="text-blue-600 w-10 h-10" />
+            <CalendarCheck className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
           </div>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
@@ -346,10 +346,10 @@ function BodySection() {
         <TrendingUp />
       </div>
       <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
           <p className="text-2xl font-semibold text-black">Revenue Streams 💰</p>
           <div className="bg-blue-100 p-2 rounded-full">
-            <Wallet className="text-blue-600 w-10 h-10" />
+            <Wallet className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
           </div>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
@@ -374,11 +374,11 @@ function BodySection() {
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
         <Activity />
       </div>
-      <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4">
+      <div className="flex flex-col flex-1 z-10 relative"> 
+        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
           <p className="text-2xl font-semibold text-black">Discoverability 🔍</p>
           <div className="bg-blue-100 p-2 rounded-full">
-            <MapPin className="text-blue-600 w-10 h-10" />
+            <MapPin className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
           </div>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
