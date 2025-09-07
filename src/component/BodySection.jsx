@@ -153,63 +153,57 @@ function BodySection() {
         </div>
 
         {/* Cards Container */}
-<div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
+      <div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
   <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
     {[
       {
         title: "Brand Communication Reboot",
-        description: `Streamlined the messaging across platforms — focused on “nature as luxury” instead of just food.\n\nReframed Tall Oaks as a calm experience, not just a restaurant.`,
+        description:
+          "Streamlined messaging across platforms. Shifted the focus from just food to “nature as luxury”. Reframed Tall Oaks as a calm experience, not just a restaurant.",
         tag: "Branding",
       },
       {
         title: "Content-Led Social Strategy",
-        description: `Built content around ambient dining, nature sounds, and soulful storytelling.\n\nStrong push on Reels + stories → shifted perception from unknown spot to weekend ritual.`,
+        description:
+          "Built content around ambient dining, nature sounds, and soulful storytelling. Strong push on Reels + Stories → shifted perception from unknown spot to weekend ritual.",
         tag: "Social",
       },
       {
         title: "Event Marketing as a Core Lever",
-        description: `Curated campaigns that made the space more than just a dining venue:\n\n• Hug A Tree: Cause-led Earth Day campaign.\n• Coastal Fiesta: Seasonal fare.\n• Weekend Breakfast Launch: Early footfall.`,
+        description:
+          "Curated campaigns that made the space more than just a dining venue: Hug A Tree (Earth Day), Coastal Fiesta (seasonal fare), Weekend Breakfast Launch (early footfall).",
         tag: "Events",
       },
-       {
-    title: "Collaborations & IRL Experiences",
-    description: `• Partnered with the Run Scene → offline synergy & new audience.\n\n• Weekend workshops (e.g., dumpling making) → increased dwell time & experience value.`,
-    tag: "Experience",
-  },
-  {
-    title: "Influencer & OOH Strategy",
-    description: `• Selected aligned creators — authenticity over just reach.\n\n• Local outdoor ads in Whitefield reinforced visual identity.`,
-    tag: "Influencers",
-  },
+      {
+        title: "Collaborations & IRL Experiences",
+        description:
+          "Partnered with the Run Scene for offline synergy & new audience. Weekend workshops (e.g., dumpling making) increased dwell time & experience value.",
+        tag: "Experience",
+      },
+      {
+        title: "Influencer & OOH Strategy",
+        description:
+          "Selected aligned creators — authenticity over just reach. Local outdoor ads in Whitefield reinforced visual identity.",
+        tag: "Influencers",
+      },
     ].map((card, index) => (
       <div
         key={index}
-        className="w-full sm:w-[48%] lg:w-[320px] h-[220px] group perspective"
+        className="w-full sm:w-[48%] lg:w-[320px] group perspective"
       >
-        <div className="card-inner">
+        <div className="card-inner relative h-full min-h-[150px]">
           {/* Front Side */}
-          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden z-10">
-            {/* Icon top-right */}
-            <div className="absolute top-4 right-4 bg-white shadow-xl p-2 rounded-full z-10">
-              <ThumbsDown className="text-black w-5 h-5 hover:text-blue-500" />
-            </div>
-
-            {/* Main content */}
-            <div className="flex flex-col gap-2 pr-6 relative z-0">
-              <h3 className="text-base font-semibold text-black leading-snug">
-                {card.title}
-              </h3>
-              <span className="inline-block w-fit px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
-                {card.tag}
-              </span>
-              <p className="text-gray-700 text-sm line-clamp-5 whitespace-pre-wrap">
-                {card.description}
-              </p>
-            </div>
+          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden z-10 flex flex-col justify-center items-center">
+            <h3 className="text-lg font-semibold text-black text-center">
+              {card.title}
+            </h3>
+            <span className="mt-3 inline-block px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
+              #{card.tag}
+            </span>
           </div>
 
           {/* Back Side */}
-          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden rotate-y-180 overflow-y-auto">
+          <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden rotate-y-180 overflow-y-auto flex items-center justify-center">
             <p className="text-gray-700 text-sm whitespace-pre-wrap">
               {card.description}
             </p>
@@ -219,8 +213,6 @@ function BodySection() {
     ))}
   </div>
 </div>
-
-
 
       </motion.div>
 
@@ -233,170 +225,144 @@ function BodySection() {
           Not Just A Tactical Deployment
         </p>
       </div>
-     <motion.div
-  className="w-full max-w-[1200px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-between gap-6"
-  variants={fadeInUp}
-  initial="hidden"
-  whileInView="visible"
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  {/* Left Section */}
-  <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-    {/* Card 1: Social Growth */}
-    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col overflow-hidden">
-      <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow sm:mb-1 mb-2">
-        🌟 Featured
-      </div>
-      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-        <Users />
-      </div>
-      <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4 sm:mt-2 mt-4">
-          <p className="text-2xl font-semibold text-black">Social Growth 📈</p>
-          <div className="bg-blue-100 p-2 rounded-full">
-            <Users className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
+      <motion.div
+        className="w-full max-w-[1200px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-between gap-6"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        {/* Left Section */}
+        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
+          {/* Card 1: Social Growth */}
+          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
+            {/* <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow sm:mb-1 mb-2">
+            🌟 Featured
+          </div> */}
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Users />
+            </div>
+            <div className="flex flex-col flex-1 z-10 relative">
+              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
+                <p className="text-2xl font-semibold text-black">
+                  Social Growth
+                </p>
+                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+                  <Users className="text-black sm:w-8 sm:h-8 w-6 h-6" />
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                Grew from ~500 to 2800+ followers organically. That’s 450%
+                growth – without heavy ad spends.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2: Engagement Uplift */}
+          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
+            {/* <div className="absolute top-2 left-4 bg-pink-100 text-pink-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+            🔥 Trending
+          </div> */}
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <HeartHandshake />
+            </div>
+            <div className="flex flex-col flex-1 z-10 relative">
+              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
+                <p className="text-2xl font-semibold text-black">
+                  Engagement Uplift
+                </p>
+                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+                  <HeartHandshake className="text-black sm:w-8 sm:h-8 w-6 h-6" />
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
+                engagement – 4x increase in shares & saves vs regular content.
+              </p>
+            </div>
           </div>
         </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1">
-          Grew from ~500 to 2800+ followers organically. That’s 450% growth –
-          without heavy ad spends.
-        </p>
-        <div className="flex justify-start mt-auto pt-4 gap-1">
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-        </div>
-      </div>
-    </div>
 
-    {/* Card 2: Engagement Uplift */}
-    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col overflow-hidden">
-      <div className="absolute top-2 left-4 bg-pink-100 text-pink-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-        🔥 Trending
-      </div>
-      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-        <HeartHandshake />
-      </div>
-      <div className="flex flex-col  flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
-          <p className="text-2xl font-semibold text-black">Engagement Uplift ❤️</p>
-          <div className="bg-blue-100 p-2 rounded-full">
-            <HeartHandshake className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
+        {/* Middle Section */}
+        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4 items-center justify-center">
+          {/* Card: Event Visibility */}
+          <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] w-full overflow-hidden flex flex-col">
+            {/* <div className="absolute top-2 left-4 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+            ✅ Sold Out
+          </div> */}
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Activity />
+            </div>
+            <div className="flex flex-col flex-1 z-10 relative">
+              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
+                <p className="text-2xl font-semibold text-black">
+                  Event Visibility
+                </p>
+                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+                  <CalendarCheck className="text-black sm:w-8 sm:h-8 w-6 h-6" />
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                Weekend events consistently sold out or were at full capacity.
+                Branded events started drawing people purely for the experience,
+                not just the food.
+              </p>
+            </div>
           </div>
         </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1">
-          Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
-          engagement – 4x increase in shares & saves vs regular content.
-        </p>
-        <div className="flex justify-start mt-auto pt-4 gap-1">
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-        </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Middle Section */}
-  <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4 items-center justify-center">
-    {/* Card: Event Visibility */}
-    <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-5 min-h-[250px] w-full overflow-hidden flex flex-col">
-      <div className="absolute top-2 left-4 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-        ✅ Sold Out
-      </div>
-      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-        <Activity />
-      </div>
-      <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
-          <p className="text-2xl font-semibold text-black">Event Visibility ✨</p>
-          <div className="bg-blue-100 p-2 rounded-full">
-            <CalendarCheck className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
+        {/* Right Section */}
+        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
+          {/* Card: Revenue Streams */}
+          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
+            {/* <div className="absolute top-2 left-4 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+            🍳 New Service
+          </div> */}
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <TrendingUp />
+            </div>
+            <div className="flex flex-col flex-1 z-10 relative">
+              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
+                <p className="text-2xl font-semibold text-black">
+                  Revenue Streams
+                </p>
+                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+                  <Wallet className="text-black sm:w-8 sm:h-8 w-6 h-6" />
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                Breakfast service introduced due to demand → now a steady source
+                of footfall before 11 AM.
+              </p>
+            </div>
+          </div>
+
+          {/* Card: Discoverability */}
+          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
+            {/* <div className="absolute top-2 left-4 bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded-full shadow">
+            📍 Location Buzz
+          </div> */}
+            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
+              <Activity />
+            </div>
+            <div className="flex flex-col flex-1 z-10 relative">
+              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
+                <p className="text-2xl font-semibold text-black">
+                  Discoverability
+                </p>
+                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+                  <MapPin className="text-black sm:w-8 sm:h-8 w-6 h-6" />
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                Footfall increased via offline + digital visibility – now known
+                as a weekend destination, not just a restaurant.
+              </p>
+            </div>
           </div>
         </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1">
-          Weekend events consistently sold out or were at full capacity.
-          Branded events started drawing people purely for the experience,
-          not just the food.
-        </p>
-        <div className="flex justify-start mt-auto pt-4 gap-1">
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Right Section */}
-  <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-    {/* Card: Revenue Streams */}
-    <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col overflow-hidden">
-      <div className="absolute top-2 left-4 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-        🍳 New Service
-      </div>
-      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-        <TrendingUp />
-      </div>
-      <div className="flex flex-col flex-1 z-10 relative">
-        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
-          <p className="text-2xl font-semibold text-black">Revenue Streams 💰</p>
-          <div className="bg-blue-100 p-2 rounded-full">
-            <Wallet className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
-          </div>
-        </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1">
-          Breakfast service introduced due to demand → now a steady source
-          of footfall before 11 AM.
-        </p>
-        <div className="flex justify-start mt-auto pt-4 gap-1">
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-        </div>
-      </div>
-    </div>
-
-    {/* Card: Discoverability */}
-    <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[250px] flex flex-col overflow-hidden">
-      <div className="absolute top-2 left-4 bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-        📍 Location Buzz
-      </div>
-      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-        <Activity />
-      </div>
-      <div className="flex flex-col flex-1 z-10 relative"> 
-        <div className="flex items-center justify-between mb-4 sm:mt-4 mt-4">
-          <p className="text-2xl font-semibold text-black">Discoverability 🔍</p>
-          <div className="bg-blue-100 p-2 rounded-full">
-            <MapPin className="text-blue-600 sm:w-10 sm:h-10 w-6 h-6" />
-          </div>
-        </div>
-        <p className="text-gray-700 text-sm leading-relaxed flex-1">
-          Footfall increased via offline + digital visibility – now known
-          as a weekend destination, not just a restaurant.
-        </p>
-        <div className="flex justify-start mt-auto pt-4 gap-1">
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-yellow-400 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-          <Star className="text-gray-300 w-5 h-5" />
-        </div>
-      </div>
-    </div>
-  </div>
-</motion.div>
-
+      </motion.div>
 
       <motion.div
         variants={fadeInUp}
@@ -421,38 +387,34 @@ function BodySection() {
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="w-full px-4 mt-40 flex justify-center"
+        className="w-full px-4 mt-32 text-center"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-center leading-snug">
+        <h2 className="text-3xl md:text-5xl font-semibold leading-snug">
           Within 9 Months of Launch
           <br />
           Here Were Our <span className="text-blue-600">Results</span>
         </h2>
       </motion.div>
 
-      <div className="flex flex-col justify-center items-center md:flex-row gap-8 md:gap-32 ml-4 md:ml-32 mt-10">
-        <div className="flex flex-col items-center text-center">
-          <p className="text-blue-600 font-bold text-3xl md:text-[40px]">
-            10 L+
-          </p>
-          <p className="text-gray-600 text-base md:text-lg">App Installs</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <p className="text-blue-600 font-bold text-3xl md:text-[40px]">₹30</p>
-          <p className="text-gray-600 text-base md:text-lg">Avg CPI</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <p className="text-blue-600 font-bold text-3xl md:text-[40px]">
-            60%+
-          </p>
-          <p className="text-gray-600 text-base md:text-lg ml-14">
-            Install to Active Rate
-          </p>
-        </div>
-      </div>
+     <div className="mt-12 max-w-5xl mx-auto flex flex-col md:flex-row text-center bg-gradient-to-b from-blue-600 to-white rounded-xl overflow-hidden shadow-lg">
+  <div className="flex-1 p-6 border-b md:border-b-0 md:border-r border-blue-400">
+    <p className="text-black font-bold text-4xl md:text-5xl">10L+</p>
+    <p className="text-gray-700 mt-2">App Installs</p>
+  </div>
+  <div className="flex-1 p-6 border-b md:border-b-0 md:border-r border-blue-400">
+    <p className="text-black font-bold text-4xl md:text-5xl">₹30</p>
+    <p className="text-gray-700 mt-2">Avg CPI</p>
+  </div>
+  <div className="flex-1 p-6">
+    <p className="text-black font-bold text-4xl md:text-5xl">60%+</p>
+    <p className="text-gray-700 mt-2">Install → Active</p>
+  </div>
+</div>
 
-      <div className="flex justify-center w-full">
-        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-200 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
+
+
+      <div className="flex justify-center w-full mt-10">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-100 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
           {/* Button-style box */}
           <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
             Bonus Win!
