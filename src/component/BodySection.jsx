@@ -16,7 +16,9 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
-import "@fontsource/roboto/400.css";
+ 
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/700.css";
 import { useState } from "react";
 
 function BodySection() {

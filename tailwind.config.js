@@ -6,10 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-      },
+      // fontFamily: {
+      //   inter: ['Inter', 'sans-serif'],
+      //   roboto: ['Roboto', 'sans-serif'],
+      // },
     },
   }, 
   plugins: [],
