@@ -466,9 +466,9 @@ function BodySection() {
         className="grid grid-cols-1 md:grid-cols-5 gap-6 mt-10 max-w-6xl mx-auto px-4"
       >
         {/* First row */}
-        <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-3">
+        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
           <p>
-            <span className="text-4xl text-blue-400 font-bold">01</span>
+            <span className="text-4xl text-blue-600 font-bold">01</span>
             <span className="block text-md md:text-lg mt-4">
               What worked? Prioritising events as the lead communication
               vehicle. We didn’t just say “Tall Oaks is a vibe” - we showed it
@@ -477,9 +477,9 @@ function BodySection() {
             </span>
           </p>
         </div>
-        <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-2">
+        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-2">
           <p>
-            <span className="text-4xl text-blue-400 font-bold">02</span>
+            <span className="text-4xl text-blue-600 font-bold">02</span>
             <span className="block text-md md:text-lg mt-4">
               At RevLabs, we don’t just run campaigns. We build what the brand
               needs- thoughtfully, creatively, and always with the client’s
@@ -488,9 +488,9 @@ function BodySection() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-2">
+        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-2">
           <p>
-            <span className="text-4xl text-blue-400 font-bold">03</span>
+            <span className="text-4xl text-blue-600 font-bold">03</span>
             <span className="block text-md md:text-lg mt-4">
               In new categories, the best-performing messages are often not what
               the founders expect — only structured experimentation reveals the
@@ -500,9 +500,9 @@ function BodySection() {
         </div>
 
         {/* Second row */}
-        <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6 text-black md:col-span-3">
+        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
           <p>
-            <span className="text-4xl text-blue-400 font-bold">04</span>
+            <span className="text-4xl text-blue-600 font-bold">04</span>
             <span className="block text-md md:text-lg mt-4">
               Retargeting without deep event segmentation is a wasted lever for
               fintech apps.
