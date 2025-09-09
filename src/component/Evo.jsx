@@ -21,7 +21,7 @@ import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
 import { useState } from "react";
 
-function BodySection() {
+function Evo() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
@@ -44,7 +44,7 @@ function BodySection() {
               {/* Headings */}
               <div className="leading-tight">
                 <p className="text-2xl md:text-[40px] font-roboto  text-black">
-                  Tall Oaks
+                  Evo
                 </p>
                 <h1 className="text-2xl md:text-[40px]  font-roboto text-blue-600">
                   Case Study
@@ -53,17 +53,16 @@ function BodySection() {
 
               {/* Subheading */}
               <p className="text-lg md:text-xl text-black mt-6">
-                How We Helped Tall Oaks Increase Footfall, Visibility, and
-                Revenue With the Right Kind of Marketing.
+                How We Built a Premium Vegetarian Brand From Scratch and Drove
+                200+ Covers in Its First Weekend.
               </p>
 
               {/* Description */}
               <p className="text-gray-700 mt-4">
-                Tall Oaks is a nature-led dining destination in Whitefield,
-                Bangalore. Known for its sprawling open-air space, it's a
-                restaurant that blurs the lines between a meal out and a
-                slow-living experience, perfect for families, groups, and solo
-                diners alike.
+                Evo is a premium vegetarian fine dining restaurant located in
+                Jayanagar, Bangalore. Built for a discerning niche, primarily
+                Brahmin and Marwadi families, Evo blends global vegetarian
+                cuisine with an elegant, refined dining experience.
               </p>
 
               {/* Challenge section */}
@@ -72,12 +71,11 @@ function BodySection() {
                   Key Business Challenge
                 </h3>
                 <p className="text-gray-700">
-                  When we started working with Tall Oaks, the brand had
-                  potential but lacked traction, both online and offline. The
-                  problem? - Low social presence, an unclear brand voice, weak
-                  visibility for events, and no strong recall in a crowded
-                  market. People liked it once they discovered it, but
-                  discoverability was the issue
+                  When Evo approached us, there was no name, no logo, no brand —
+                  just a strong vision. The goal was to launch a high-end
+                  vegetarian restaurant that felt personal, not pretentious.
+                  They needed more than marketing; they needed a brand built
+                  from scratch, with depth and clarity.
                 </p>
               </div>
             </div>
@@ -159,34 +157,40 @@ function BodySection() {
           <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
             {[
               {
-                title: "Brand Communication Reboot",
+                title: "Concept Development",
                 description:
-                  "Streamlined messaging across platforms. Shifted the focus from just food to “nature as luxury”. Reframed Tall Oaks as a calm experience, not just a restaurant.",
+                  "We helped name the brand, define its personality, and create a narrative around 'elevated vegetarian dining.' The tone was warm, premium, and niche-friendly.",
                 tag: "Branding",
               },
               {
-                title: "Content-Led Social Strategy",
+                title: "Visual Identity & Brand Voice",
                 description:
-                  "Built content around ambient dining, nature sounds, and soulful storytelling. Strong push on Reels + Stories → shifted perception from unknown spot to weekend ritual.",
+                  "Designed a visual system and content voice that felt both aspirational and grounded — no loud colours or overdone copy. Every detail was curated.",
+                tag: "Design",
+              },
+              {
+                title: "Launch Strategy",
+                description:
+                  "From pre-launch teasers to opening weekend campaigns, we built a calendar that generated curiosity without feeling massy. (Can show the Grid)",
+                tag: "Strategy",
+              },
+              {
+                title: "Social Media Setup & Content Production",
+                description:
+                  "Crafted everything in-house from food photography to storytelling reels to copy that spoke directly to Evo’s core audience. (Can add content production samples as a slideshow card)",
                 tag: "Social",
               },
               {
-                title: "Event Marketing as a Core Lever",
+                title: "Community Activation",
                 description:
-                  "Curated campaigns that made the space more than just a dining venue: Hug A Tree (Earth Day), Coastal Fiesta (seasonal fare), Weekend Breakfast Launch (early footfall).",
+                  "Invited the right people — small, trusted, culturally aligned influencers — for previews and soft buzz. Focused on word-of-mouth credibility over paid hype.",
+                tag: "Community",
+              },
+              {
+                title: "Offline Launch Moments",
+                description:
+                  "Designed family-style offline activations to build goodwill with the exact communities Evo wanted to serve. (Can attach the flyers made)",
                 tag: "Events",
-              },
-              {
-                title: "Collaborations & IRL Experiences",
-                description:
-                  "Partnered with the Run Scene for offline synergy & new audience. Weekend workshops (e.g., dumpling making) increased dwell time & experience value.",
-                tag: "Experience",
-              },
-              {
-                title: "Influencer & OOH Strategy",
-                description:
-                  "Selected aligned creators — authenticity over just reach. Local outdoor ads in Whitefield reinforced visual identity.",
-                tag: "Influencers",
               },
             ].map((card, index) => (
               <div
@@ -226,163 +230,125 @@ function BodySection() {
           Not Just A Tactical Deployment
         </p>
       </div>
-      <motion.div
-        className="w-full max-w-[1200px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-between gap-6"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        {/* Left Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card 1: Social Growth */}
-          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow sm:mb-1 mb-2">
-            🌟 Featured
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Users />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Social Growth
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <Users className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Grew from ~500 to 2800+ followers organically. That’s 450%
-                growth – without heavy ad spends.
-              </p>
-            </div>
-          </div>
 
-          {/* Card 2: Engagement Uplift */}
-          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-pink-100 text-pink-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            🔥 Trending
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <HeartHandshake />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Engagement Uplift
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <HeartHandshake className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
-                engagement – 4x increase in shares & saves vs regular content.
-              </p>
-            </div>
+        {/* Cards Section */}
+
+     <motion.div
+  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-6"
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  {/* Left Section */}
+  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2">
+    {/* Card 1: Opening Weekend Success */}
+    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
+        <TrendingUp />
+      </div>
+      <div className="flex flex-col flex-1 z-10 relative">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-lg font-semibold text-black">200+ Covers</p>
+          <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+            <CalendarCheck className="text-black w-6 h-6" />
           </div>
         </div>
-
-        {/* Middle Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4 items-center justify-center">
-          {/* Card: Event Visibility */}
-          <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] w-full overflow-hidden flex flex-col">
-            {/* <div className="absolute top-2 left-4 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            ✅ Sold Out
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Activity />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Event Visibility
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <CalendarCheck className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Weekend events consistently sold out or were at full capacity.
-                Branded events started drawing people purely for the experience,
-                not just the food.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card: Revenue Streams */}
-          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            🍳 New Service
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <TrendingUp />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Revenue Streams
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <Wallet className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Breakfast service introduced due to demand → now a steady source
-                of footfall before 11 AM.
-              </p>
-            </div>
-          </div>
-
-          {/* Card: Discoverability */}
-          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            📍 Location Buzz
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Activity />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Discoverability
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <MapPin className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Footfall increased via offline + digital visibility – now known
-                as a weekend destination, not just a restaurant.
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="w-full px-4 mt-20 flex justify-center"
-      >
-        <p className="text-xl sm:text-2xl text-center max-w-4xl  text-black">
-          Over 3 quarters, we progressively shifted from broad acquisition to
-          precision-led cohort targeting. Messaging matured from generic “save
-          more” claims to contextual brand-aligned propositions (“Extra 10% on
-          your Zomato spends” etc.). As user understanding improved, CPI
-          compressed and quality of installs rose sharply.
+        <p className="text-gray-700 text-sm leading-relaxed flex-1">
+          Strong bookings without deep discounts — driven purely by brand
+          presence and buzz.
         </p>
-      </motion.div>
+      </div>
+    </div>
 
-      <motion.div
+    {/* Card 2: Social Media Foundation */}
+    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
+        <Users />
+      </div>
+      <div className="flex flex-col flex-1 z-10 relative">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-lg font-semibold text-black">
+            Social Media Foundation
+          </p>
+          <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+            <HeartHandshake className="text-black w-6 h-6" />
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm leading-relaxed flex-1">
+          Followers and engagement built entirely organically — premium
+          content + storytelling ensured traction from Day 1.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Section */}
+  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2">
+    {/* Card: Brand Perception */}
+    <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
+        <Activity />
+      </div>
+      <div className="flex flex-col flex-1 z-10 relative">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-lg font-semibold text-black">
+            Brand Perception Win
+          </p>
+          <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+            <Star className="text-black w-6 h-6" />
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm leading-relaxed flex-1">
+          Core audience praised Evo as “premium, but personal” — exactly
+          the positioning we aimed for.
+        </p>
+      </div>
+    </div>
+
+    {/* Card: Community-Led Growth */}
+    <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+      <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
+        <Users />
+      </div>
+      <div className="flex flex-col flex-1 z-10 relative">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-lg font-semibold text-black">
+            Community-Led Growth
+          </p>
+          <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
+            <Users className="text-black w-6 h-6" />
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm leading-relaxed flex-1">
+          Early footfall included family groups and regulars who connected
+          with the brand’s values — not just the food.
+        </p>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+<motion.div
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="w-full px-4 mt-16 flex justify-center"
+>
+  <p className="text-lg sm:text-xl text-center max-w-3xl text-black">
+    Evo didn’t need loud marketing. It needed the right kind of presence,
+    elegant, niche-aware, and culturally intuitive. We didn’t chase
+    virality, we built resonance.
+  </p>
+</motion.div>
+
+
+      {/* Results Section */}
+
+      {/* <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -395,9 +361,9 @@ function BodySection() {
           <br />
           Here Were Our <span className="text-blue-600">Results</span>
         </h2>
-      </motion.div>
+      </motion.div> */}
 
-      <div className="mt-12 max-w-5xl mx-auto flex flex-col md:flex-row text-center bg-gradient-to-b from-blue-600 to-white rounded-xl overflow-hidden shadow-lg">
+      {/* <div className="mt-12 max-w-5xl mx-auto flex flex-col md:flex-row text-center bg-gradient-to-b from-blue-600 to-white rounded-xl overflow-hidden shadow-lg">
         <div className="flex-1 p-6 border-b md:border-b-0 md:border-r sm:border-blue-400 border-blue-100">
           <p className="text-black font-bold text-4xl md:text-5xl">10L+</p>
           <p className="text-gray-700 mt-2">App Installs</p>
@@ -410,17 +376,17 @@ function BodySection() {
           <p className="text-black font-bold text-4xl md:text-5xl">60%+</p>
           <p className="text-gray-700 mt-2">Install → Active</p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex justify-center w-full mt-10">
-        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-100 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
+      {/* <div className="flex justify-center w-full mt-10">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-100 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6"> */}
           {/* Button-style box */}
-          <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
+          {/* <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
             Bonus Win!
-          </div>
+          </div> */}
 
           {/* Text content */}
-          <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
+          {/* <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
             <p className="whitespace-normal">
               Early adopters had a 64% activation within 30 days — significantly
               higher than fintech app benchmarks.
@@ -433,9 +399,9 @@ function BodySection() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <motion.div
+      {/* <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -452,18 +418,18 @@ function BodySection() {
         <p className="text-lg md:text-2xl text-black mt-2">
           We Solve Adoption Architecture for New-Economy Brands
         </p>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-5 gap-6 mt-10 max-w-6xl mx-auto px-4"
-      >
+      > */}
         {/* First row */}
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
+        {/* <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
           <p>
             <span className="text-4xl text-blue-600 font-bold">01</span>
             <span className="block text-md md:text-lg mt-4">
@@ -494,10 +460,10 @@ function BodySection() {
               truth.
             </span>
           </p>
-        </div>
+        </div> */}
 
         {/* Second row */}
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
+        {/* <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
           <p>
             <span className="text-4xl text-blue-600 font-bold">04</span>
             <span className="block text-md md:text-lg mt-4">
@@ -506,16 +472,16 @@ function BodySection() {
             </span>
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <div className="flex items-center justify-center px-4 text-center mt-6">
+      {/* <div className="flex items-center justify-center px-4 text-center mt-6">
         <p className="text-lg md:text-xl text-black w-fit">
           For us, paid media isn’t about spend. It’s about creating behavioural
           momentum that converts.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default BodySection;
+export default Evo;
