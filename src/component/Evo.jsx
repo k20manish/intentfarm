@@ -233,7 +233,7 @@ function Evo() {
 {/* Cards Section */}
 
 <motion.div
-  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-y-6 lg:gap-y-0 lg:gap-x-32 items-stretch"
+  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-y-6 lg:gap-y-0 lg:gap-x-48 items-stretch "
   variants={fadeInUp}
   initial="hidden"
   whileInView="visible"
