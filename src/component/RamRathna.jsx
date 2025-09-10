@@ -188,51 +188,56 @@ function RamRathna() {
       </motion.div>
 
       {/* Results Grid */}
-      <motion.div
-        className="w-full max-w-[1200px] mx-auto py-10 px-4 flex flex-col lg:flex-row justify-between gap-6"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        {/* Results Cards */}
-        {[
-          {
-            title: "Zero-to-One Brand Recall",
-            description: "Built brand awareness from scratch through storytelling and hyperlocal activation.",
-            icon: <Star />,
-          },
-          {
-            title: "Consistent Footfall",
-            description: "Early visits converted into regulars, helped by aggregator presence and offline visibility.",
-            icon: <MapPin />,
-          },
-          {
-            title: "150% Sales Growth",
-            description: "Sunday offers turned slow movers into sell-outs with a 150% lift in sales.",
-            icon: <TrendingUp />,
-          },
-          {
-            title: "Organic Social Media Growth",
-            description: "Full social media management led to strong early traction with zero ad spend.",
-            icon: <HeartHandshake />,
-          },
-        ].map((item, idx) => (
-          <div
-            key={idx}
-            className="flex-1 relative bg-gradient-to-r from-white to-[#e6f3ef] border border-blue-600 rounded-xl shadow p-6 min-h-[200px]"
-          >
-            <div className="flex justify-between items-center mb-4">
-              <p className="text-2xl font-semibold text-black">{item.title}</p>
-              <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full text-black">
-                {item.icon}
-              </div>
-            </div>
-            <p className="text-gray-700 text-sm">{item.description}</p>
-          </div>
-        ))}
-      </motion.div>
+     <motion.div
+  className="w-full max-w-[1200px] mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center"
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  {/* Results Cards */}
+  {[
+    {
+      title: "Zero-to-One Brand Recall",
+      description:
+        "Built brand awareness from scratch through storytelling and hyperlocal activation.",
+      icon: <Star />,
+    },
+    {
+      title: "Consistent Footfall",
+      description:
+        "Early visits converted into regulars, helped by aggregator presence and offline visibility.",
+      icon: <MapPin />,
+    },
+    {
+      title: "150% Sales Growth",
+      description:
+        "Sunday offers turned slow movers into sell-outs with a 150% lift in sales.",
+      icon: <TrendingUp />,
+    },
+    {
+      title: "Organic Social Media Growth",
+      description:
+        "Full social media management led to strong early traction with zero ad spend.",
+      icon: <HeartHandshake />,
+    },
+  ].map((item, idx) => (
+    <div
+      key={idx}
+      className="w-full max-w-[400px] bg-gradient-to-r from-white to-[#e6f3ef] border border-blue-600 rounded-xl shadow p-6 min-h-[150px]"
+    >
+      <div className="flex justify-between items-center mb-2">
+        <p className="text-xl font-semibold text-black">{item.title}</p>
+        <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full text-black">
+          {item.icon}
+        </div>
+      </div>
+      <p className="text-gray-700 text-sm">{item.description}</p>
+    </div>
+  ))}
+</motion.div>
+
 
       {/* Closing Takeaway */}
       <motion.div

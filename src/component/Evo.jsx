@@ -233,13 +233,14 @@ function Evo() {
 {/* Cards Section */}
 
 <motion.div
-  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-6 items-stretch"
+  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-y-6 lg:gap-y-0 lg:gap-x-32 items-stretch"
   variants={fadeInUp}
   initial="hidden"
   whileInView="visible"
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
 >
+
   {/* Left Section */}
   <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2 items-stretch">
     {/* Card 1: Opening Weekend Success */}
