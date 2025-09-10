@@ -221,20 +221,19 @@ function Evo() {
         </div>
       </motion.div>
 
-      {/* full funnel section */}
-      <div className="mt-28 text-center px-4">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-          A Full-Funnel Rethink
-        </p>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500 mt-2">
-          Not Just A Tactical Deployment
-        </p>
-      </div>
+{/* Impact heading */}
+     <div className="mt-28 text-center px-4">
+       <p className="text-lg sm:text-[45px] font-semibold text-black">
+    Impact (Data-Driven Results)
+  </p>
+</div>
 
-        {/* Cards Section */}
+ 
 
-     <motion.div
-  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-6"
+{/* Cards Section */}
+
+<motion.div
+  className="w-full max-w-[1000px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-center gap-6 items-stretch"
   variants={fadeInUp}
   initial="hidden"
   whileInView="visible"
@@ -242,9 +241,9 @@ function Evo() {
   viewport={{ once: true }}
 >
   {/* Left Section */}
-  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2">
+  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2 items-stretch">
     {/* Card 1: Opening Weekend Success */}
-    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 flex flex-col overflow-hidden flex-1 h-full">
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
         <TrendingUp />
       </div>
@@ -257,13 +256,17 @@ function Evo() {
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
           Strong bookings without deep discounts — driven purely by brand
-          presence and buzz.
+          presence and buzz. <br />
+          <span className="font-medium">
+            200+ Covers in Opening Weekend – Strong bookings without deep
+            discounts purely on the back of brand presence and buzz.
+          </span>
         </p>
       </div>
     </div>
 
     {/* Card 2: Social Media Foundation */}
-    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+    <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-4 flex flex-col overflow-hidden flex-1 h-full">
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
         <Users />
       </div>
@@ -278,16 +281,21 @@ function Evo() {
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
           Followers and engagement built entirely organically — premium
-          content + storytelling ensured traction from Day 1.
+          content + storytelling ensured traction from Day 1. <br />
+          <span className="font-medium">
+            Social Media Foundation Set – Followers and engagement were
+            built entirely organically. Premium content + storytelling ensured
+            real traction from Day 1.
+          </span>
         </p>
       </div>
     </div>
   </div>
 
   {/* Right Section */}
-  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2">
+  <div className="flex flex-col gap-6 w-full lg:w-[45%] p-2 items-stretch">
     {/* Card: Brand Perception */}
-    <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+    <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-4 flex flex-col overflow-hidden flex-1 h-full">
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
         <Activity />
       </div>
@@ -302,13 +310,18 @@ function Evo() {
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
           Core audience praised Evo as “premium, but personal” — exactly
-          the positioning we aimed for.
+          the positioning we aimed for. <br />
+          <span className="font-medium">
+            Brand Perception Win – Core audience (Brahmin, Marwadi, and
+            vegetarian diners) praised Evo as “premium, but personal” —
+            exactly what we aimed for.
+          </span>
         </p>
       </div>
     </div>
 
     {/* Card: Community-Led Growth */}
-    <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-4 min-h-[180px] flex flex-col overflow-hidden">
+    <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-4 flex flex-col overflow-hidden flex-1 h-full">
       <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[70px] pointer-events-none select-none">
         <Users />
       </div>
@@ -323,12 +336,18 @@ function Evo() {
         </div>
         <p className="text-gray-700 text-sm leading-relaxed flex-1">
           Early footfall included family groups and regulars who connected
-          with the brand’s values — not just the food.
+          with the brand’s values — not just the food. <br />
+          <span className="font-medium">
+            Community-Led Growth – Early footfall included large family
+            groups and regulars who connected with the brand’s values, not just
+            the food.
+          </span>
         </p>
       </div>
     </div>
   </div>
 </motion.div>
+
 
 <motion.div
   variants={fadeInUp}
