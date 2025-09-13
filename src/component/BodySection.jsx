@@ -1,27 +1,8 @@
-import { ThumbsDown, Shield } from "lucide-react";
-
-import {
-  Users,
-  HeartHandshake,
-  TrendingUp,
-  Activity,
-  Star,
-  CalendarCheck,
-  Wallet,
-  MapPin,
-  CalendarHeart,
-  Megaphone,
-  PenTool,
-  Handshake,
-} from "lucide-react";
-
 import { motion } from "framer-motion";
-
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
-import { useState } from "react";
 
-function BodySection() {
+function TallOaks() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
@@ -29,6 +10,7 @@ function BodySection() {
 
   return (
     <div className="h-fit pt-24 pb-10 px-8">
+      {/* Hero Section */}
       <motion.div
         variants={fadeInUp}
         initial="hidden"
@@ -40,13 +22,13 @@ function BodySection() {
         {/* Left Section */}
         <div className="w-full md:w-1/2">
           <div className="p-4 bg-white h-full">
-            <div className="space-y-4 text-justify  ">
+            <div className="space-y-4 text-justify">
               {/* Headings */}
               <div className="leading-tight">
-                <p className="text-2xl md:text-[40px] font-roboto  text-black">
+                <p className="text-2xl md:text-[40px] font-roboto text-black">
                   Tall Oaks
                 </p>
-                <h1 className="text-2xl md:text-[40px]  font-roboto text-blue-600">
+                <h1 className="text-2xl md:text-[40px] font-roboto text-blue-600">
                   Case Study
                 </h1>
               </div>
@@ -66,25 +48,25 @@ function BodySection() {
                 diners alike.
               </p>
 
-              {/* Challenge section */}
+              {/* Challenge */}
               <div className="bg-white rounded-xl space-y-2 mt-8">
                 <h3 className="text-xl font-semibold text-blue-600">
-                  Key Business Challenge
+                  Brand Challenge
                 </h3>
                 <p className="text-gray-700">
                   When we started working with Tall Oaks, the brand had
                   potential but lacked traction, both online and offline. The
-                  problem? - Low social presence, an unclear brand voice, weak
+                  problem? Low social presence, an unclear brand voice, weak
                   visibility for events, and no strong recall in a crowded
                   market. People liked it once they discovered it, but
-                  discoverability was the issue
+                  discoverability was the issue.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Right Section - Snapshot */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
@@ -115,7 +97,8 @@ function BodySection() {
                 },
                 {
                   title: "Key Growth Levers:",
-                  content: "Event Marketing | Social Media Presence",
+                  content:
+                    "Event Marketing | Social Media Presence | Collaborations | Influencer + OOH Strategy",
                 },
               ].map((item, idx) => (
                 <div
@@ -135,7 +118,7 @@ function BodySection() {
         </motion.div>
       </motion.div>
 
-      {/* Diagnostic Section */}
+      {/* Our Process Section */}
       <motion.div
         variants={fadeInUp}
         initial="hidden"
@@ -146,242 +129,75 @@ function BodySection() {
       >
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="text-2xl md:text-[45px]  text-black">
-            Before Scaling We Conducted
+          <p className="text-2xl md:text-[45px] text-black">
+            What We Did To Reframe Tall Oaks
           </p>
           <p className="text-2xl md:text-[45px] font-bold text-blue-500">
-            A Detailed Diagnostic Exercise
+            Our Process
           </p>
         </div>
 
-        {/* Cards Container */}
-        <div className="w-full max-w-[1080px] mx-auto flex flex-col gap-6">
-          <div className="flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
-            {[
-              {
-                title: "Brand Communication Reboot",
-                description:
-                  "Streamlined messaging across platforms. Shifted the focus from just food to “nature as luxury”. Reframed Tall Oaks as a calm experience, not just a restaurant.",
-                tag: "Branding",
-              },
-              {
-                title: "Content-Led Social Strategy",
-                description:
-                  "Built content around ambient dining, nature sounds, and soulful storytelling. Strong push on Reels + Stories → shifted perception from unknown spot to weekend ritual.",
-                tag: "Social",
-              },
-              {
-                title: "Event Marketing as a Core Lever",
-                description:
-                  "Curated campaigns that made the space more than just a dining venue: Hug A Tree (Earth Day), Coastal Fiesta (seasonal fare), Weekend Breakfast Launch (early footfall).",
-                tag: "Events",
-              },
-              {
-                title: "Collaborations & IRL Experiences",
-                description:
-                  "Partnered with the Run Scene for offline synergy & new audience. Weekend workshops (e.g., dumpling making) increased dwell time & experience value.",
-                tag: "Experience",
-              },
-              {
-                title: "Influencer & OOH Strategy",
-                description:
-                  "Selected aligned creators — authenticity over just reach. Local outdoor ads in Whitefield reinforced visual identity.",
-                tag: "Influencers",
-              },
-            ].map((card, index) => (
-              <div
-                key={index}
-                className="w-full sm:w-[48%] lg:w-[320px] group perspective"
-              >
-                <div className="card-inner relative h-full min-h-[150px]">
-                  {/* Front Side */}
-                  <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden z-10 flex flex-col justify-center items-center">
-                    <h3 className="text-lg font-semibold text-black text-center">
-                      {card.title}
-                    </h3>
-                    <span className="mt-3 inline-block px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
-                      #{card.tag}
-                    </span>
-                  </div>
-
-                  {/* Back Side */}
-                  <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 px-5 py-2 backface-hidden rotate-y-180  flex   justify-center">
-                    <p className="text-gray-700 text-sm whitespace-pre-wrap">
-                      {card.description}
-                    </p>
-                  </div>
+        {/* Cards */}
+        <div className="w-full max-w-[1080px] mx-auto flex flex-wrap justify-center items-stretch gap-x-6 gap-y-10">
+          {[
+            {
+              title: "Brand Communication Reboot",
+              description:
+                "Streamlined the messaging across platforms — focused on ‘nature as luxury’ instead of just food. Reframed Tall Oaks as a calm experience, not just a restaurant.",
+              tag: "Branding",
+            },
+            {
+              title: "Content-Led Social Strategy",
+              description:
+                "Built content around ambient dining, nature sounds, and soulful storytelling. Strong push on Reels + stories shifted perception to a weekend ritual.",
+              tag: "Social",
+            },
+            {
+              title: "Event Marketing",
+              description:
+                "Curated campaigns like Hug A Tree (Earth Day), Coastal Fiesta, and Weekend Breakfast Launch — driving footfall and unlocking new revenue streams.",
+              tag: "Events",
+            },
+            {
+              title: "Collaborations & IRL Experiences",
+              description:
+                "Partnered with the Run Scene, hosted workshops (like dumpling making), and increased dwell time through experiential dining.",
+              tag: "Experiential",
+            },
+            {
+              title: "Influencer & OOH Strategy",
+              description:
+                "Worked with aligned creators and pushed local recall with outdoor ads in Whitefield — reinforcing visual identity and discovery.",
+              tag: "Growth",
+            },
+          ].map((card, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[48%] lg:w-[320px] group perspective"
+            >
+              <div className="card-inner relative h-full min-h-[150px]">
+                {/* Front */}
+                <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 p-5 backface-hidden z-10 flex flex-col justify-center items-center">
+                  <h3 className="text-lg font-semibold text-black text-center">
+                    {card.title}
+                  </h3>
+                  <span className="mt-3 inline-block px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
+                    #{card.tag}
+                  </span>
+                </div>
+                {/* Back */}
+                <div className="absolute w-full h-full bg-white shadow-md rounded-xl border border-blue-400 px-5 py-2 backface-hidden rotate-y-180 flex justify-center">
+                  <p className="text-gray-700 text-sm whitespace-pre-wrap">
+                    {card.description}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </motion.div>
 
-      {/* full funnel section */}
-      <div className="mt-28 text-center px-4">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-          A Full-Funnel Rethink
-        </p>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500 mt-2">
-          Not Just A Tactical Deployment
-        </p>
-      </div>
-      <motion.div
-        className="w-full max-w-[1200px] mx-auto py-6 px-4 flex flex-col lg:flex-row justify-between gap-6"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        {/* Left Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card 1: Social Growth */}
-          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full shadow sm:mb-1 mb-2">
-            🌟 Featured
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Users />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Social Growth
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <Users className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Grew from ~500 to 2800+ followers organically. That’s 450%
-                growth – without heavy ad spends.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2: Engagement Uplift */}
-          <div className="relative bg-gradient-to-r from-white to-[#bfded2] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-pink-100 text-pink-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            🔥 Trending
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <HeartHandshake />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Engagement Uplift
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <HeartHandshake className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Hug A Tree reels, Coastal Fiesta Campaign + stories hit strong
-                engagement – 4x increase in shares & saves vs regular content.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Middle Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4 items-center justify-center">
-          {/* Card: Event Visibility */}
-          <div className="relative bg-[#e6ecfc] border border-blue-600 rounded-xl shadow p-5 min-h-[200px] w-full overflow-hidden flex flex-col">
-            {/* <div className="absolute top-2 left-4 bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            ✅ Sold Out
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Activity />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Event Visibility
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <CalendarCheck className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Weekend events consistently sold out or were at full capacity.
-                Branded events started drawing people purely for the experience,
-                not just the food.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex flex-col gap-6 w-full lg:w-1/3 p-4">
-          {/* Card: Revenue Streams */}
-          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            🍳 New Service
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <TrendingUp />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Revenue Streams
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <Wallet className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Breakfast service introduced due to demand → now a steady source
-                of footfall before 11 AM.
-              </p>
-            </div>
-          </div>
-
-          {/* Card: Discoverability */}
-          <div className="relative bg-gradient-to-r from-[#bfded2] to-white border border-blue-600 rounded-xl shadow p-5 min-h-[200px] flex flex-col overflow-hidden">
-            {/* <div className="absolute top-2 left-4 bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded-full shadow">
-            📍 Location Buzz
-          </div> */}
-            <div className="absolute bottom-4 right-4 opacity-10 text-blue-500 text-[80px] pointer-events-none select-none">
-              <Activity />
-            </div>
-            <div className="flex flex-col flex-1 z-10 relative">
-              <div className="flex items-center justify-between mb-4 sm:mt-0 mt-4">
-                <p className="text-2xl font-semibold text-black">
-                  Discoverability
-                </p>
-                <div className="bg-gradient-to-tr from-blue-500 to-white p-2 rounded-full">
-                  <MapPin className="text-black sm:w-8 sm:h-8 w-6 h-6" />
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">
-                Footfall increased via offline + digital visibility – now known
-                as a weekend destination, not just a restaurant.
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="w-full px-4 mt-20 flex justify-center"
-      >
-        <p className="text-xl sm:text-2xl text-center max-w-4xl  text-black">
-          Over 3 quarters, we progressively shifted from broad acquisition to
-          precision-led cohort targeting. Messaging matured from generic “save
-          more” claims to contextual brand-aligned propositions (“Extra 10% on
-          your Zomato spends” etc.). As user understanding improved, CPI
-          compressed and quality of installs rose sharply.
-        </p>
-      </motion.div>
-
+      {/* Results Section */}
       <motion.div
         variants={fadeInUp}
         initial="hidden"
@@ -391,131 +207,97 @@ function BodySection() {
         className="w-full px-4 mt-32 text-center"
       >
         <h2 className="text-3xl md:text-5xl font-semibold leading-snug">
-          Within 9 Months of Launch
-          <br />
-          Here Were Our <span className="text-blue-600">Results</span>
+          Impact <span className="text-blue-600">(Data-Driven Results)</span>
         </h2>
       </motion.div>
 
-      <div className="mt-12 max-w-5xl mx-auto flex flex-col md:flex-row text-center bg-gradient-to-b from-blue-600 to-white rounded-xl overflow-hidden shadow-lg">
-        <div className="flex-1 p-6 border-b md:border-b-0 md:border-r sm:border-blue-400 border-blue-100">
-          <p className="text-black font-bold text-4xl md:text-5xl">10L+</p>
-          <p className="text-gray-700 mt-2">App Installs</p>
+      {/* Pyramid Layout */}
+      <div className="mt-12 max-w-6xl mx-auto flex flex-col items-center gap-6">
+        {/* First Row - 3 Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+          {/* Social Growth */}
+          <div className="p-6 bg-gradient-to-b from-blue-600 to-white rounded-xl shadow-lg border border-blue-100 text-center">
+            <p className="text-black font-bold text-3xl md:text-4xl">
+              450% Growth
+            </p>
+            <p className="text-gray-700 mt-2">
+              Grew from ~500 to 2800+ followers organically without heavy ad
+              spends.
+            </p>
+          </div>
+
+          {/* Engagement Uplift */}
+          <div className="p-6 bg-gradient-to-b from-blue-600 to-white rounded-xl shadow-lg border border-blue-100 text-center">
+            <p className="text-black font-bold text-3xl md:text-4xl">
+              4x Uplift
+            </p>
+            <p className="text-gray-700 mt-2">
+              Hug A Tree reels, Coastal Fiesta Campaign + stories drove 4x
+              increase in shares & saves vs regular content.
+            </p>
+          </div>
+
+          {/* Event Visibility */}
+          <div className="p-6 bg-gradient-to-b from-blue-600 to-white rounded-xl shadow-lg border border-blue-100 text-center">
+            <p className="text-black font-bold text-3xl md:text-4xl">
+              ↑ Visibility
+            </p>
+            <p className="text-gray-700 mt-2">
+              Weekend events sold out; branded events like <i>Lights Off</i>,{" "}
+              <i>Dine In</i>, <i>Hug a Tree</i>, and breakfast surrounded by
+              nature drew people for the experience, not just the food.
+            </p>
+          </div>
         </div>
-        <div className="flex-1 p-6 border-b md:border-b-0 md:border-r sm:border-blue-400 border-blue-100">
-          <p className="text-black font-bold text-4xl md:text-5xl">₹30</p>
-          <p className="text-gray-700 mt-2">Avg CPI</p>
-        </div>
-        <div className="flex-1 p-6 ">
-          <p className="text-black font-bold text-4xl md:text-5xl">60%+</p>
-          <p className="text-gray-700 mt-2">Install → Active</p>
+
+        {/* Second Row - 2 Cards Centered */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-2/3">
+          {/* Revenue Streams */}
+          <div className="p-6 bg-gradient-to-b from-blue-600 to-white rounded-xl shadow-lg border border-blue-100 text-center">
+            <p className="text-black font-bold text-3xl md:text-4xl">
+              New Revenue
+            </p>
+            <p className="text-gray-700 mt-2">
+              Breakfast service (weekends only) started from early demand → now
+              a steady footfall source before 11 AM.
+            </p>
+          </div>
+
+          {/* Discoverability */}
+          <div className="p-6 bg-gradient-to-b from-blue-600 to-white rounded-xl shadow-lg border border-blue-100 text-center">
+            <p className="text-black font-bold text-3xl md:text-4xl">
+              ↑ Discoverability
+            </p>
+            <p className="text-gray-700 mt-2">
+              Increased footfall via offline + digital visibility — customers
+              now see the space as more than just a restaurant.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="flex justify-center w-full mt-10">
-        <div className="flex flex-col md:flex-row justify-center items-center bg-blue-100 rounded-lg md:rounded-full px-4 py-4 w-full md:w-[1150px] mt-6">
-          {/* Button-style box */}
-          <div className="bg-white text-black font-bold rounded-full px-10 py-2 whitespace-nowrap mb-3 md:mb-0 md:ml-2">
-            Bonus Win!
-          </div>
-
-          {/* Text content */}
-          <div className="md:ml-10 text-black text-base md:text-lg w-full text-center md:text-left">
-            <p className="whitespace-normal">
-              Early adopters had a 64% activation within 30 days — significantly
-              higher than fintech app benchmarks.
-            </p>
-            <p className="mt-1">
-              Most transactions came from new-to-category users, indicating
-              success in{" "}
-              <span className="font-semibold">category creation</span> — not
-              just share-shift.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      {/* Takeaway */}
       <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-20 ml-4  flex flex-col justify-center items-center leading-tight text-center md:text-left"
+        className="mt-20 ml-4 flex flex-col justify-center items-center leading-tight text-center md:text-left"
       >
-        <p className="text-3xl md:text-[44px] font-medium text-black m-0 p-0 leading-none">
+        {/* <p className="text-3xl md:text-[44px] font-medium text-black m-0 p-0 leading-none">
           Our Learnings
-        </p>
-        <p className="text-3xl md:text-[44px] text-blue-600 font-semibold m-0 p-0 leading-none">
-          We Don't Just Run Campaigns
-        </p>
-        <p className="text-lg md:text-2xl text-black mt-2">
-          We Solve Adoption Architecture for New-Economy Brands
+        </p> */}
+        <p className="text-lg md:text-2xl text-black mt-2 text-center max-w-4xl">
+          We didn’t just say “Tall Oaks is a vibe” – we showed it through slow
+          experiences, collaborations, nature-driven content, and experiential
+          storytelling. At RevLabs, we don’t just run campaigns. We build what
+          the brand needs — thoughtfully, creatively, and always with the
+          client’s goals at the centre.
         </p>
       </motion.div>
-
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-5 gap-6 mt-10 max-w-6xl mx-auto px-4"
-      >
-        {/* First row */}
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
-          <p>
-            <span className="text-4xl text-blue-600 font-bold">01</span>
-            <span className="block text-md md:text-lg mt-4">
-              What worked? Prioritising events as the lead communication
-              vehicle. We didn’t just say “Tall Oaks is a vibe” - we showed it
-              through slow experiences, collaborations, nature-driven content,
-              and experiential storytelling.
-            </span>
-          </p>
-        </div>
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-2">
-          <p>
-            <span className="text-4xl text-blue-600 font-bold">02</span>
-            <span className="block text-md md:text-lg mt-4">
-              At RevLabs, we don’t just run campaigns. We build what the brand
-              needs- thoughtfully, creatively, and always with the client’s
-              goals at the centre.
-            </span>
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-2">
-          <p>
-            <span className="text-4xl text-blue-600 font-bold">03</span>
-            <span className="block text-md md:text-lg mt-4">
-              In new categories, the best-performing messages are often not what
-              the founders expect — only structured experimentation reveals the
-              truth.
-            </span>
-          </p>
-        </div>
-
-        {/* Second row */}
-        <div className="bg-white rounded-xl border border-blue-300 shadow-sm p-6 text-black md:col-span-3">
-          <p>
-            <span className="text-4xl text-blue-600 font-bold">04</span>
-            <span className="block text-md md:text-lg mt-4">
-              Retargeting without deep event segmentation is a wasted lever for
-              fintech apps.
-            </span>
-          </p>
-        </div>
-      </motion.div>
-
-      <div className="flex items-center justify-center px-4 text-center mt-6">
-        <p className="text-lg md:text-xl text-black w-fit">
-          For us, paid media isn’t about spend. It’s about creating behavioural
-          momentum that converts.
-        </p>
-      </div>
     </div>
   );
 }
 
-export default BodySection;
+export default TallOaks;

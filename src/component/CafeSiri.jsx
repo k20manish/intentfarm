@@ -94,7 +94,7 @@ function CafeSiri() {
           <div className="bg-white flex flex-col items-center px-2">
             {/* Image */}
             <img
-                src="./Hubble.png"
+              src="./Hubble.png"
               alt="Hubble App"
               className="rounded-t-2xl w-full max-w-[545px] h-auto object-cover"
             />
@@ -235,15 +235,23 @@ function CafeSiri() {
       <div className="mt-12 max-w-5xl mx-auto flex flex-col md:flex-row text-center bg-gradient-to-b from-blue-600 to-white rounded-xl overflow-hidden shadow-lg">
         <div className="flex-1 p-6 border-b md:border-b-0 md:border-r sm:border-blue-400 border-blue-100">
           <p className="text-black font-bold text-4xl md:text-5xl">2x</p>
-          <p className="text-gray-700 mt-2">Increase in dish visibility & clicks on aggregators</p>
+          <p className="text-gray-700 mt-2">
+            Increase in dish visibility & clicks on aggregators
+          </p>
         </div>
         <div className="flex-1 p-6 border-b md:border-b-0 md:border-r sm:border-blue-400 border-blue-100">
-          <p className="text-black font-bold text-4xl md:text-5xl">↑ Footfall</p>
-          <p className="text-gray-700 mt-2">Significant student & group diner growth post campaigns</p>
+          <p className="text-black font-bold text-4xl md:text-5xl">
+            ↑ Footfall
+          </p>
+          <p className="text-gray-700 mt-2">
+            Significant student & group diner growth post campaigns
+          </p>
         </div>
         <div className="flex-1 p-6">
           <p className="text-black font-bold text-4xl md:text-5xl">Boost</p>
-          <p className="text-gray-700 mt-2">In offer redemptions via influencer collabs & promos</p>
+          <p className="text-gray-700 mt-2">
+            In offer redemptions via influencer collabs & promos
+          </p>
         </div>
       </div>
 
@@ -256,9 +264,6 @@ function CafeSiri() {
         viewport={{ once: true }}
         className="mt-20 ml-4 flex flex-col justify-center items-center leading-tight text-center md:text-left"
       >
-        <p className="text-3xl md:text-[44px] font-medium text-black m-0 p-0 leading-none">
-          Brandwise Takeaway
-        </p>
         <p className="text-lg md:text-2xl text-black mt-2 text-center max-w-4xl">
           Café Siri didn’t need a rebrand — it just needed to be seen clearly.
           With the right stories, sharper content, and strategic partnerships,
@@ -269,5 +274,4 @@ function CafeSiri() {
   );
 }
 
- 
 export default CafeSiri;
